@@ -48,7 +48,7 @@ export class WebSocketApi implements IApi<IWebSocketContext> {
                         address: msg.connection.address,
                     },
                 });
-                this.resolver.execute(message, context, this.injector);
+                this.resolver.execute(message, context);
             });
 
             ws.on("close", () => {
